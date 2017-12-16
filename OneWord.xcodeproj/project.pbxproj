@@ -36,6 +36,8 @@
 		8FB063971FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063951FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift */; };
 		8FB063A51FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063A41FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift */; };
 		8FB063A61FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063A41FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift */; };
+		8FB063AF1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063AE1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift */; };
+		8FB063B01FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063AE1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,7 @@
 		8FB063911FE4734700CFFAF5 /* GreetingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingController.swift; sourceTree = "<group>"; };
 		8FB063951FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldSceneAssembler.swift; sourceTree = "<group>"; };
 		8FB063A41FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleHorizontalLayoutViewController.swift; sourceTree = "<group>"; };
+		8FB063AE1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +113,9 @@
 		8FB0634C1FE4471600CFFAF5 /* OneWord */ = {
 			isa = PBXGroup;
 			children = (
-				8FB063A31FE5B60200CFFAF5 /* Layouts */,
 				8FB0637D1FE45AD900CFFAF5 /* Core */,
+				8FB063AD1FE5E1B700CFFAF5 /* Extensions */,
+				8FB063A31FE5B60200CFFAF5 /* Layouts */,
 				8FB0637A1FE454B400CFFAF5 /* Scenes */,
 				8FB063851FE464F500CFFAF5 /* Scene Factories */,
 				8FB063941FE4772900CFFAF5 /* Assemblers */,
@@ -209,6 +213,14 @@
 				8FB063A41FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift */,
 			);
 			path = Layouts;
+			sourceTree = "<group>";
+		};
+		8FB063AD1FE5E1B700CFFAF5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8FB063AE1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,6 +330,7 @@
 				8FB063961FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift in Sources */,
 				8FB063781FE451E200CFFAF5 /* AppCoordinator.swift in Sources */,
 				8FB0638E1FE470BA00CFFAF5 /* HelloWorldViewModel.swift in Sources */,
+				8FB063AF1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift in Sources */,
 				8FB063921FE4734700CFFAF5 /* GreetingController.swift in Sources */,
 				8FB0634E1FE4471600CFFAF5 /* AppDelegate.swift in Sources */,
 				8FB063871FE4663200CFFAF5 /* SceneFactory.swift in Sources */,
@@ -340,6 +353,7 @@
 				8FB063881FE4663200CFFAF5 /* SceneFactory.swift in Sources */,
 				8FB063791FE451E200CFFAF5 /* AppCoordinator.swift in Sources */,
 				8FB063971FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift in Sources */,
+				8FB063B01FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift in Sources */,
 				8FB063931FE4734700CFFAF5 /* GreetingController.swift in Sources */,
 				8FB0638B1FE4692400CFFAF5 /* HelloWorldFactory.swift in Sources */,
 				8FB063A61FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift in Sources */,

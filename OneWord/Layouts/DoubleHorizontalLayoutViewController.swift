@@ -68,17 +68,8 @@ class DoubleHorizontalLayoutViewController: UIViewController {
         self.view.addSubview(topView)
         self.view.addSubview(bottomView)
         
-        let topViewController = viewModel.topViewController
-        topViewController.view.frame = self.topView.frame
-        self.addChildViewController(topViewController)
-        self.topView.addSubview(topViewController.view)
-        topViewController.didMove(toParentViewController: self)
-        
-        let bottomViewController = viewModel.bottomViewController
-        bottomViewController.view.frame = self.bottomView.frame
-        self.addChildViewController(bottomViewController)
-        self.topView.addSubview(bottomViewController.view)
-        bottomViewController.didMove(toParentViewController: self)
+        addChildViewController(self.viewModel.topViewController, to: self.topView)
+        addChildViewController(self.viewModel.bottomViewController, to: self.bottomView)
     }
     
     // MARK:- Life cycle
