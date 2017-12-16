@@ -110,7 +110,7 @@
 				8FB0637D1FE45AD900CFFAF5 /* Core */,
 				8FB0637A1FE454B400CFFAF5 /* Scenes */,
 				8FB063851FE464F500CFFAF5 /* Scene Factories */,
-				8FB063941FE4772900CFFAF5 /* Scene Assemblers */,
+				8FB063941FE4772900CFFAF5 /* Assemblers */,
 				8FB0636D1FE44FC800CFFAF5 /* Coordinators */,
 				8FB0638C1FE4709C00CFFAF5 /* View Models */,
 				8FB063901FE4733200CFFAF5 /* Controllers */,
@@ -191,12 +191,12 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		8FB063941FE4772900CFFAF5 /* Scene Assemblers */ = {
+		8FB063941FE4772900CFFAF5 /* Assemblers */ = {
 			isa = PBXGroup;
 			children = (
 				8FB063951FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift */,
 			);
-			path = "Scene Assemblers";
+			path = Assemblers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
