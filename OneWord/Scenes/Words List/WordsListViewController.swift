@@ -8,9 +8,9 @@
 
 import UIKit
 
-// TODO: implement WordsListViewModelProtocol
-protocol WordsListViewModelProtocol {
-    
+protocol WordsListViewModelProtocol: UITableViewDataSource, UITableViewDelegate {
+    var emptyListMessage: String { get }
+    var shouldHideWordsList: Bool { get }
 }
 
 class WordsListViewController: UIViewController {
@@ -28,5 +28,19 @@ class WordsListViewController: UIViewController {
         #if DEBUG
             print(String(describing: type(of: self)) + "." + #function)
         #endif
+        
+        setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.isHidden = self.viewModel.shouldHideWordsList
+    }
+    
+    private func setupView() {
+        self.emptyListLabel.text = self.viewModel.emptyListMessage
+        self.tableView.delegate = self.viewModel
+        self.tableView.dataSource = self.viewModel
     }
 }
