@@ -14,7 +14,11 @@ protocol AddWordTopBarSceneAssemblerProtocol {
 }
 
 class AddWordTopBarSceneAssembler {
+    private let viewModelDelegate: AddWordTopBarViewModelDelegate?
     
+    init(addWordTopBarViewModelDelegate: AddWordTopBarViewModelDelegate? = nil) {
+        self.viewModelDelegate = addWordTopBarViewModelDelegate
+    }
 }
 
 // MARK:- AddWordTopBarSceneAssemblerProtocol
@@ -24,6 +28,8 @@ extension AddWordTopBarSceneAssembler: AddWordTopBarSceneAssemblerProtocol {
     }
     
     func assemble() -> AddWordTopBarViewModel {
-        return AddWordTopBarViewModel()
+        let viewModel = AddWordTopBarViewModel()
+        viewModel.delegate = self.viewModelDelegate
+        return viewModel
     }
 }
