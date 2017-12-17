@@ -12,7 +12,14 @@ struct FakeWordsDataSource {
     var words = ["hello", "bannana", "house", "job"]
 }
 
+protocol WordsListViewModelDelegate: class {
+    func wordsListViewModel(_ viewModel: WordsListViewModel, didSelectRowAt: IndexPath)
+}
+
 class WordsListViewModel: NSObject {
+    // MARK:- Properties
+    weak var delegate: WordsListViewModelDelegate?
+    
     let list = FakeWordsDataSource()
 }
 
@@ -43,4 +50,8 @@ extension WordsListViewModel: UITableViewDataSource {
 }
 
 // MARK:- UITableViewDelegate
-extension WordsListViewModel: UITableViewDelegate { }
+extension WordsListViewModel: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.delegate?.wordsListViewModel(self, didSelectRowAt: indexPath)
+    }
+}
