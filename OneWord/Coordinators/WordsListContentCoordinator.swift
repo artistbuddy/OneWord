@@ -33,5 +33,10 @@ class WordsListContentCoordinator: RootViewCoordinator {
         
         self.navigationController.viewControllers = [vc]
     }
+    
+    func showAddWordScene() {
+        let vc: AddWordViewController = AddWordSceneAssembler().assemble()
+        self.navigationController.viewControllers = [vc]
+    }
 }
 

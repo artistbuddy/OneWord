@@ -72,6 +72,16 @@
 		8FB063E81FE6BC2E00CFFAF5 /* WordsListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063E61FE6BC2E00CFFAF5 /* WordsListFactory.swift */; };
 		8FB063EA1FE6BE2A00CFFAF5 /* WordsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063E91FE6BE2A00CFFAF5 /* WordsListViewModel.swift */; };
 		8FB063EB1FE6BE2A00CFFAF5 /* WordsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063E91FE6BE2A00CFFAF5 /* WordsListViewModel.swift */; };
+		8FB063ED1FE6DD0B00CFFAF5 /* AddWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063EC1FE6DD0B00CFFAF5 /* AddWordViewController.swift */; };
+		8FB063EE1FE6DD0B00CFFAF5 /* AddWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063EC1FE6DD0B00CFFAF5 /* AddWordViewController.swift */; };
+		8FB063F01FE6DD1E00CFFAF5 /* AddWord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB063EF1FE6DD1E00CFFAF5 /* AddWord.storyboard */; };
+		8FB063F11FE6DD1E00CFFAF5 /* AddWord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB063EF1FE6DD1E00CFFAF5 /* AddWord.storyboard */; };
+		8FB063F31FE6E11A00CFFAF5 /* AddWordFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063F21FE6E11A00CFFAF5 /* AddWordFactory.swift */; };
+		8FB063F41FE6E11A00CFFAF5 /* AddWordFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063F21FE6E11A00CFFAF5 /* AddWordFactory.swift */; };
+		8FB063F61FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063F51FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift */; };
+		8FB063F71FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063F51FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift */; };
+		8FB063F91FE6E36B00CFFAF5 /* AddWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063F81FE6E36B00CFFAF5 /* AddWordViewModel.swift */; };
+		8FB063FA1FE6E36B00CFFAF5 /* AddWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063F81FE6E36B00CFFAF5 /* AddWordViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +133,11 @@
 		8FB063E31FE6B64000CFFAF5 /* AddWordTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordTopBar.swift; sourceTree = "<group>"; };
 		8FB063E61FE6BC2E00CFFAF5 /* WordsListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListFactory.swift; sourceTree = "<group>"; };
 		8FB063E91FE6BE2A00CFFAF5 /* WordsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListViewModel.swift; sourceTree = "<group>"; };
+		8FB063EC1FE6DD0B00CFFAF5 /* AddWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordViewController.swift; sourceTree = "<group>"; };
+		8FB063EF1FE6DD1E00CFFAF5 /* AddWord.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddWord.storyboard; sourceTree = "<group>"; };
+		8FB063F21FE6E11A00CFFAF5 /* AddWordFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordFactory.swift; sourceTree = "<group>"; };
+		8FB063F51FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordSceneAssembler.swift; sourceTree = "<group>"; };
+		8FB063F81FE6E36B00CFFAF5 /* AddWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +251,7 @@
 				8FB063E01FE6B42700CFFAF5 /* WordsListTopBarFactory.swift */,
 				8FB063E31FE6B64000CFFAF5 /* AddWordTopBar.swift */,
 				8FB063E61FE6BC2E00CFFAF5 /* WordsListFactory.swift */,
+				8FB063F21FE6E11A00CFFAF5 /* AddWordFactory.swift */,
 			);
 			path = "Scene Factories";
 			sourceTree = "<group>";
@@ -248,6 +264,7 @@
 				8FB063D71FE6A8B100CFFAF5 /* WordsListTopBarViewModal.swift */,
 				8FB063DA1FE6A8FE00CFFAF5 /* AddWordTopBarViewModel.swift */,
 				8FB063E91FE6BE2A00CFFAF5 /* WordsListViewModel.swift */,
+				8FB063F81FE6E36B00CFFAF5 /* AddWordViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -266,6 +283,7 @@
 			children = (
 				8FB063951FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift */,
 				8FB063BB1FE6979D00CFFAF5 /* WordsListLayoutAssembler.swift */,
+				8FB063F51FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift */,
 			);
 			path = Assemblers;
 			sourceTree = "<group>";
@@ -295,6 +313,8 @@
 				8FB063CE1FE69EDB00CFFAF5 /* AddWordTopBar.storyboard */,
 				8FB063D11FE6A12900CFFAF5 /* WordsListViewController.swift */,
 				8FB063D41FE6A13D00CFFAF5 /* WordsList.storyboard */,
+				8FB063EC1FE6DD0B00CFFAF5 /* AddWordViewController.swift */,
+				8FB063EF1FE6DD1E00CFFAF5 /* AddWord.storyboard */,
 			);
 			path = "Words List";
 			sourceTree = "<group>";
@@ -384,6 +404,7 @@
 			files = (
 				8FB063D51FE6A13D00CFFAF5 /* WordsList.storyboard in Resources */,
 				8FB063C91FE69C9100CFFAF5 /* WordsListTopBar.storyboard in Resources */,
+				8FB063F01FE6DD1E00CFFAF5 /* AddWord.storyboard in Resources */,
 				8FB063581FE4471600CFFAF5 /* LaunchScreen.storyboard in Resources */,
 				8FB0637F1FE460CB00CFFAF5 /* HelloWorld.storyboard in Resources */,
 				8FB063CF1FE69EDB00CFFAF5 /* AddWordTopBar.storyboard in Resources */,
@@ -397,6 +418,7 @@
 			files = (
 				8FB063D01FE69EDB00CFFAF5 /* AddWordTopBar.storyboard in Resources */,
 				8FB063CA1FE69C9100CFFAF5 /* WordsListTopBar.storyboard in Resources */,
+				8FB063F11FE6DD1E00CFFAF5 /* AddWord.storyboard in Resources */,
 				8FB063D61FE6A13D00CFFAF5 /* WordsList.storyboard in Resources */,
 				8FB063801FE460CB00CFFAF5 /* HelloWorld.storyboard in Resources */,
 			);
@@ -411,8 +433,10 @@
 			files = (
 				8FB063961FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift in Sources */,
 				8FB063781FE451E200CFFAF5 /* AppCoordinator.swift in Sources */,
+				8FB063ED1FE6DD0B00CFFAF5 /* AddWordViewController.swift in Sources */,
 				8FB063D21FE6A12900CFFAF5 /* WordsListViewController.swift in Sources */,
 				8FB0638E1FE470BA00CFFAF5 /* HelloWorldViewModel.swift in Sources */,
+				8FB063F31FE6E11A00CFFAF5 /* AddWordFactory.swift in Sources */,
 				8FB063BC1FE6979D00CFFAF5 /* WordsListLayoutAssembler.swift in Sources */,
 				8FB063E41FE6B64000CFFAF5 /* AddWordTopBar.swift in Sources */,
 				8FB063CC1FE69ECE00CFFAF5 /* AddWordTopBarViewController.swift in Sources */,
@@ -421,6 +445,7 @@
 				8FB0634E1FE4471600CFFAF5 /* AppDelegate.swift in Sources */,
 				8FB063871FE4663200CFFAF5 /* SceneFactory.swift in Sources */,
 				8FB063E11FE6B42700CFFAF5 /* WordsListTopBarFactory.swift in Sources */,
+				8FB063F91FE6E36B00CFFAF5 /* AddWordViewModel.swift in Sources */,
 				8FB063821FE460E400CFFAF5 /* HelloWorldViewController.swift in Sources */,
 				8FB063A51FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift in Sources */,
 				8FB063E71FE6BC2E00CFFAF5 /* WordsListFactory.swift in Sources */,
@@ -436,6 +461,7 @@
 				8FB063D81FE6A8B100CFFAF5 /* WordsListTopBarViewModal.swift in Sources */,
 				8FB0636F1FE44FF400CFFAF5 /* Coordinator.swift in Sources */,
 				8FB063DE1FE6AE7300CFFAF5 /* WordsListLayoutController.swift in Sources */,
+				8FB063F61FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +471,7 @@
 			files = (
 				8FB063BD1FE6979D00CFFAF5 /* WordsListLayoutAssembler.swift in Sources */,
 				8FB063731FE4515000CFFAF5 /* RootViewControllerProvider.swift in Sources */,
+				8FB063FA1FE6E36B00CFFAF5 /* AddWordViewModel.swift in Sources */,
 				8FB063701FE44FF400CFFAF5 /* Coordinator.swift in Sources */,
 				8FB063C71FE69C7F00CFFAF5 /* WordsListTopBarViewController.swift in Sources */,
 				8FB063831FE460E400CFFAF5 /* HelloWorldViewController.swift in Sources */,
@@ -464,11 +491,14 @@
 				8FB0638B1FE4692400CFFAF5 /* HelloWorldFactory.swift in Sources */,
 				8FB063A61FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift in Sources */,
 				8FB0638F1FE470BA00CFFAF5 /* HelloWorldViewModel.swift in Sources */,
+				8FB063F71FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift in Sources */,
 				8FB063DC1FE6A8FE00CFFAF5 /* AddWordTopBarViewModel.swift in Sources */,
+				8FB063F41FE6E11A00CFFAF5 /* AddWordFactory.swift in Sources */,
 				8FB063841FE4624D00CFFAF5 /* AppDelegate.swift in Sources */,
 				8FB063D31FE6A12900CFFAF5 /* WordsListViewController.swift in Sources */,
 				8FB063C31FE6995100CFFAF5 /* WordsListTopBarCoordinator.swift in Sources */,
 				8FB063E81FE6BC2E00CFFAF5 /* WordsListFactory.swift in Sources */,
+				8FB063EE1FE6DD0B00CFFAF5 /* AddWordViewController.swift in Sources */,
 				8FB063631FE4471600CFFAF5 /* OneWordTests.swift in Sources */,
 				8FB063761FE4519500CFFAF5 /* RootViewCoordinator.swift in Sources */,
 			);

@@ -27,6 +27,7 @@ class SceneFactory {
     static let wordsListTopBar: WordsListTopBarFactory = SceneFactory("WordsListTopBar")
     static let addWordTopBar: AddWordTopBarFactory = SceneFactory("AddWordTopBar")
     static let wordsList: WordsListFactory = SceneFactory("WordsList")
+    static let addWord: AddWordFactory = SceneFactory("AddWord")
 }
 
 // MARK:- HelloWorldFactory
@@ -72,6 +73,18 @@ extension SceneFactory: AddWordTopBarFactory {
 extension SceneFactory: WordsListFactory {
     func createWordsListViewController(viewModel: WordsListViewModelProtocol) -> WordsListViewController {
         guard let vc = storyboard.instantiateInitialViewController() as? WordsListViewController else {
+            fatalError("Cannot " + #function)
+        }
+        
+        vc.viewModel = viewModel
+        
+        return vc
+    }
+}
+
+extension SceneFactory: AddWordFactory {
+    func createAddWordViewController(viewModel: AddWordViewModelProtocol) -> AddWordViewController {
+        guard let vc = storyboard.instantiateInitialViewController() as? AddWordViewController else {
             fatalError("Cannot " + #function)
         }
         
