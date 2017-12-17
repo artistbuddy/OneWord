@@ -86,6 +86,8 @@
 		8FB063FD1FE6E56500CFFAF5 /* WordsListSceneAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063FB1FE6E56500CFFAF5 /* WordsListSceneAssembler.swift */; };
 		8FB063FF1FE6E66500CFFAF5 /* WordsListTopBarSceneAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063FE1FE6E66500CFFAF5 /* WordsListTopBarSceneAssembler.swift */; };
 		8FB064001FE6E66500CFFAF5 /* WordsListTopBarSceneAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063FE1FE6E66500CFFAF5 /* WordsListTopBarSceneAssembler.swift */; };
+		8FB064021FE6E73F00CFFAF5 /* AddWordTopBarSceneAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB064011FE6E73F00CFFAF5 /* AddWordTopBarSceneAssembler.swift */; };
+		8FB064031FE6E73F00CFFAF5 /* AddWordTopBarSceneAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB064011FE6E73F00CFFAF5 /* AddWordTopBarSceneAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +146,7 @@
 		8FB063F81FE6E36B00CFFAF5 /* AddWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordViewModel.swift; sourceTree = "<group>"; };
 		8FB063FB1FE6E56500CFFAF5 /* WordsListSceneAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListSceneAssembler.swift; sourceTree = "<group>"; };
 		8FB063FE1FE6E66500CFFAF5 /* WordsListTopBarSceneAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListTopBarSceneAssembler.swift; sourceTree = "<group>"; };
+		8FB064011FE6E73F00CFFAF5 /* AddWordTopBarSceneAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordTopBarSceneAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,6 +295,7 @@
 				8FB063F51FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift */,
 				8FB063FB1FE6E56500CFFAF5 /* WordsListSceneAssembler.swift */,
 				8FB063FE1FE6E66500CFFAF5 /* WordsListTopBarSceneAssembler.swift */,
+				8FB064011FE6E73F00CFFAF5 /* AddWordTopBarSceneAssembler.swift */,
 			);
 			path = Assemblers;
 			sourceTree = "<group>";
@@ -454,6 +458,7 @@
 				8FB0634E1FE4471600CFFAF5 /* AppDelegate.swift in Sources */,
 				8FB063871FE4663200CFFAF5 /* SceneFactory.swift in Sources */,
 				8FB063E11FE6B42700CFFAF5 /* WordsListTopBarFactory.swift in Sources */,
+				8FB064021FE6E73F00CFFAF5 /* AddWordTopBarSceneAssembler.swift in Sources */,
 				8FB063F91FE6E36B00CFFAF5 /* AddWordViewModel.swift in Sources */,
 				8FB063FC1FE6E56500CFFAF5 /* WordsListSceneAssembler.swift in Sources */,
 				8FB063821FE460E400CFFAF5 /* HelloWorldViewController.swift in Sources */,
@@ -504,6 +509,7 @@
 				8FB0638F1FE470BA00CFFAF5 /* HelloWorldViewModel.swift in Sources */,
 				8FB063F71FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift in Sources */,
 				8FB063DC1FE6A8FE00CFFAF5 /* AddWordTopBarViewModel.swift in Sources */,
+				8FB064031FE6E73F00CFFAF5 /* AddWordTopBarSceneAssembler.swift in Sources */,
 				8FB063F41FE6E11A00CFFAF5 /* AddWordFactory.swift in Sources */,
 				8FB063841FE4624D00CFFAF5 /* AppDelegate.swift in Sources */,
 				8FB063D31FE6A12900CFFAF5 /* WordsListViewController.swift in Sources */,

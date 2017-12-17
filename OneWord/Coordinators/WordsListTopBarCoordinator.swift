@@ -33,9 +33,8 @@ class WordsListTopBarCoordinator: RootViewCoordinator {
         self.navigationController.viewControllers = [vc]
     }
     
-    func showAddWordTopBar() {
-        let viewModel = AddWordTopBarViewModel()
-        let vc = SceneFactory.addWordTopBar.createAddWordTopBarViewController(viewModel: viewModel)
+    func showAddWordTopBarScene() {
+        let vc: AddWordTopBarViewController = AddWordTopBarSceneAssembler().assemble()
         
         self.navigationController.viewControllers = [vc]
     }
