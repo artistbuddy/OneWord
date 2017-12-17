@@ -14,7 +14,11 @@ protocol WordsListTopBarSceneAssemblerProtocol {
 }
 
 class WordsListTopBarSceneAssembler {
+    private let viewModelDelegate: WordsListTopBarViewModelDelegate?
     
+    init(wordsListTopBarViewModelDelegate: WordsListTopBarViewModelDelegate? = nil) {
+        self.viewModelDelegate = wordsListTopBarViewModelDelegate
+    }
 }
 
 // MARK:- WordsListTopBarSceneAssemblerProtocol
@@ -24,6 +28,8 @@ extension WordsListTopBarSceneAssembler: WordsListTopBarSceneAssemblerProtocol {
     }
     
     func assemble() -> WordsListTopBarViewModel {
-        return WordsListTopBarViewModel()
+        let viewModel = WordsListTopBarViewModel()
+        viewModel.delegate = self.viewModelDelegate
+        return viewModel
     }    
 }
