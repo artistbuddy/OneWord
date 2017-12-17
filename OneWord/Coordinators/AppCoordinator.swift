@@ -48,10 +48,8 @@ class AppCoordinator {
     }
     
     func showWordsListCoordinator() {
-        let coordinator = WordsListCoordinator()
+        let vc: DoubleHorizontalLayoutViewController = WordsListLayoutAssembler().assemble()
         
-        self.navigationController.viewControllers = [coordinator.rootViewController]
-        
-        coordinator.start()
+        self.navigationController.viewControllers = [vc]
     }
 }

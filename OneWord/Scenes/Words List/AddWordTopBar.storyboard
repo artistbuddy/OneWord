@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mfc-y6-Wys">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Word Top Bar View Controller-->
+        <scene sceneID="Ki0-KO-Jgl">
+            <objects>
+                <viewController id="Mfc-y6-Wys" customClass="AddWordTopBarViewController" customModule="OneWord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dv4-Bn-zOy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBt-gY-Zxe">
+                                <rect key="frame" x="170.5" y="19" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9I-qk-Gaj">
+                                <rect key="frame" x="325" y="15" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="actionSave:" destination="Mfc-y6-Wys" eventType="touchUpInside" id="Sxd-7O-G9x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KR4-Fl-Kuk">
+                                <rect key="frame" x="16" y="15" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="actionCancel:" destination="Mfc-y6-Wys" eventType="touchUpInside" id="G9p-pI-MeE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aBt-gY-Zxe" firstAttribute="centerY" secondItem="Dv4-Bn-zOy" secondAttribute="centerY" id="4LX-US-8jK"/>
+                            <constraint firstItem="1uA-xT-Tiz" firstAttribute="trailing" secondItem="P9I-qk-Gaj" secondAttribute="trailing" constant="16" id="CAn-I7-D7e"/>
+                            <constraint firstItem="P9I-qk-Gaj" firstAttribute="centerY" secondItem="Dv4-Bn-zOy" secondAttribute="centerY" id="KtN-wI-B9S"/>
+                            <constraint firstItem="KR4-Fl-Kuk" firstAttribute="leading" secondItem="1uA-xT-Tiz" secondAttribute="leading" constant="16" id="VM6-mR-Byz"/>
+                            <constraint firstItem="aBt-gY-Zxe" firstAttribute="centerX" secondItem="Dv4-Bn-zOy" secondAttribute="centerX" id="dYl-NV-lgO"/>
+                            <constraint firstItem="KR4-Fl-Kuk" firstAttribute="centerY" secondItem="Dv4-Bn-zOy" secondAttribute="centerY" id="xhZ-7U-7tL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1uA-xT-Tiz"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="60"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="KR4-Fl-Kuk" id="QXP-Fk-eDu"/>
+                        <outlet property="saveButton" destination="P9I-qk-Gaj" id="gZ7-AF-4uZ"/>
+                        <outlet property="titleLabel" destination="aBt-gY-Zxe" id="U23-Oj-lzR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEQ-RG-0X3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258" y="175"/>
+        </scene>
+    </scenes>
+</document>

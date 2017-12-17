@@ -24,12 +24,54 @@ class SceneFactory {
     
     // MARK:- Factories
     static let helloWorld: HelloWorldFactory = SceneFactory("HelloWorld")
+    static let wordsListTopBar: WordsListTopBarFactory = SceneFactory("WordsListTopBar")
+    static let addWordTopBar: AddWordTopBarFactory = SceneFactory("AddWordTopBar")
+    static let wordsList: WordsListFactory = SceneFactory("WordsList")
 }
 
 // MARK:- HelloWorldFactory
 extension SceneFactory: HelloWorldFactory {
     func createHelloWorldViewController(viewModel: HelloWorldViewModelProtocol) -> HelloWorldViewController {
         guard let vc = storyboard.instantiateInitialViewController() as? HelloWorldViewController else {
+            fatalError("Cannot " + #function)
+        }
+        
+        vc.viewModel = viewModel
+        
+        return vc
+    }
+}
+
+// MARK:- WordsListTopBarFactory
+extension SceneFactory: WordsListTopBarFactory {
+    func createWordsListTopBarViewController(viewModel: WordsListTopBarViewModelProtocol) -> WordsListTopBarViewController {
+        guard let vc = storyboard.instantiateInitialViewController() as? WordsListTopBarViewController else {
+            fatalError("Cannot " + #function)
+        }
+        
+        vc.viewModel = viewModel
+        
+        return vc
+    }
+}
+
+// MARK:- AddWordTopBarFactory
+extension SceneFactory: AddWordTopBarFactory {
+    func createAddWordTopBarViewController(viewModel: AddWordTopBarViewModelProtocol) -> AddWordTopBarViewController {
+        guard let vc = storyboard.instantiateInitialViewController() as? AddWordTopBarViewController else {
+            fatalError("Cannot " + #function)
+        }
+        
+        vc.viewModel = viewModel
+        
+        return vc
+    }
+}
+
+// MARK:- WordsListFactory
+extension SceneFactory: WordsListFactory {
+    func createWordsListViewController(viewModel: WordsListViewModelProtocol) -> WordsListViewController {
+        guard let vc = storyboard.instantiateInitialViewController() as? WordsListViewController else {
             fatalError("Cannot " + #function)
         }
         

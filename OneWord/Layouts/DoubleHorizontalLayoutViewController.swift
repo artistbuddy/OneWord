@@ -20,13 +20,13 @@ protocol DoubleHorizontalViewModelProtocol {
 class DoubleHorizontalLayoutViewController: UIViewController {
     // MARK:- Properties
     private var viewModel: DoubleHorizontalViewModelProtocol
-    weak var layout: DoubleHorizontalLayoutProtocol?
+    private var layout: DoubleHorizontalLayoutProtocol
     
     private lazy var topView: UIView = {
         let frame = CGRect(x: self.view.bounds.origin.x,
                            y: self.view.bounds.origin.y,
                            width: self.view.bounds.width,
-                           height: self.layout?.topViewHeight ?? 0)
+                           height: self.layout.topViewHeight)
         
         let view = UIView(frame: frame)
         
@@ -54,8 +54,9 @@ class DoubleHorizontalLayoutViewController: UIViewController {
     }()
     
     // MARK:- Initialization
-    init(viewModel: DoubleHorizontalViewModelProtocol) {
+    init(viewModel: DoubleHorizontalViewModelProtocol, layout: DoubleHorizontalLayoutProtocol) {
         self.viewModel = viewModel
+        self.layout = layout
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -75,6 +76,10 @@ class DoubleHorizontalLayoutViewController: UIViewController {
     // MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        #if DEBUG
+            print(String(describing: type(of: self)) + "." + #function)
+        #endif
         
         self.setupView()
     }
