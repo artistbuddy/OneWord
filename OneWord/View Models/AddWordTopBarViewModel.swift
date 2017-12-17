@@ -8,7 +8,6 @@
 
 import Foundation
 
-// TODO: implement AddWordTopBarViewModel
 class AddWordTopBarViewModel {
     init() {
         
@@ -17,5 +16,17 @@ class AddWordTopBarViewModel {
 
 // MARK:- AddWordTopBarViewModelProtocol
 extension AddWordTopBarViewModel: AddWordTopBarViewModelProtocol {
+    var title: String {
+        return "Add word"
+    }
+    
+    var saveButtonText: String {
+        return "Save"
+    }
+    
+    var cancelButtonText: String {
+        return "Cancel"
+    }
+    
     
 }
