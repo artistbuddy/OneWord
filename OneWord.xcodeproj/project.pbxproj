@@ -42,8 +42,8 @@
 		8FB063B31FE5E72B00CFFAF5 /* WordsListContentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063B11FE5E72B00CFFAF5 /* WordsListContentCoordinator.swift */; };
 		8FB063BC1FE6979D00CFFAF5 /* WordsListLayoutAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063BB1FE6979D00CFFAF5 /* WordsListLayoutAssembler.swift */; };
 		8FB063BD1FE6979D00CFFAF5 /* WordsListLayoutAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063BB1FE6979D00CFFAF5 /* WordsListLayoutAssembler.swift */; };
-		8FB063BF1FE6986600CFFAF5 /* WordsListLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063BE1FE6986600CFFAF5 /* WordsListLayoutViewModel.swift */; };
-		8FB063C01FE6986600CFFAF5 /* WordsListLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063BE1FE6986600CFFAF5 /* WordsListLayoutViewModel.swift */; };
+		8FB063BF1FE6986600CFFAF5 /* DoubleHorizontalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063BE1FE6986600CFFAF5 /* DoubleHorizontalViewModel.swift */; };
+		8FB063C01FE6986600CFFAF5 /* DoubleHorizontalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063BE1FE6986600CFFAF5 /* DoubleHorizontalViewModel.swift */; };
 		8FB063C21FE6995100CFFAF5 /* WordsListTopBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063C11FE6995100CFFAF5 /* WordsListTopBarCoordinator.swift */; };
 		8FB063C31FE6995100CFFAF5 /* WordsListTopBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063C11FE6995100CFFAF5 /* WordsListTopBarCoordinator.swift */; };
 		8FB063C61FE69C7F00CFFAF5 /* WordsListTopBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063C51FE69C7F00CFFAF5 /* WordsListTopBarViewController.swift */; };
@@ -124,7 +124,7 @@
 		8FB063AE1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		8FB063B11FE5E72B00CFFAF5 /* WordsListContentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListContentCoordinator.swift; sourceTree = "<group>"; };
 		8FB063BB1FE6979D00CFFAF5 /* WordsListLayoutAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListLayoutAssembler.swift; sourceTree = "<group>"; };
-		8FB063BE1FE6986600CFFAF5 /* WordsListLayoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListLayoutViewModel.swift; sourceTree = "<group>"; };
+		8FB063BE1FE6986600CFFAF5 /* DoubleHorizontalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleHorizontalViewModel.swift; sourceTree = "<group>"; };
 		8FB063C11FE6995100CFFAF5 /* WordsListTopBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListTopBarCoordinator.swift; sourceTree = "<group>"; };
 		8FB063C51FE69C7F00CFFAF5 /* WordsListTopBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListTopBarViewController.swift; sourceTree = "<group>"; };
 		8FB063C81FE69C9100CFFAF5 /* WordsListTopBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WordsListTopBar.storyboard; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				8FB0638D1FE470BA00CFFAF5 /* HelloWorldViewModel.swift */,
-				8FB063BE1FE6986600CFFAF5 /* WordsListLayoutViewModel.swift */,
+				8FB063BE1FE6986600CFFAF5 /* DoubleHorizontalViewModel.swift */,
 				8FB063D71FE6A8B100CFFAF5 /* WordsListTopBarViewModal.swift */,
 				8FB063DA1FE6A8FE00CFFAF5 /* AddWordTopBarViewModel.swift */,
 				8FB063E91FE6BE2A00CFFAF5 /* WordsListViewModel.swift */,
@@ -471,7 +471,7 @@
 				8FB063C21FE6995100CFFAF5 /* WordsListTopBarCoordinator.swift in Sources */,
 				8FB063DB1FE6A8FE00CFFAF5 /* AddWordTopBarViewModel.swift in Sources */,
 				8FB063B21FE5E72B00CFFAF5 /* WordsListContentCoordinator.swift in Sources */,
-				8FB063BF1FE6986600CFFAF5 /* WordsListLayoutViewModel.swift in Sources */,
+				8FB063BF1FE6986600CFFAF5 /* DoubleHorizontalViewModel.swift in Sources */,
 				8FB063C61FE69C7F00CFFAF5 /* WordsListTopBarViewController.swift in Sources */,
 				8FB063D81FE6A8B100CFFAF5 /* WordsListTopBarViewModal.swift in Sources */,
 				8FB0636F1FE44FF400CFFAF5 /* Coordinator.swift in Sources */,
@@ -494,7 +494,7 @@
 				8FB063EB1FE6BE2A00CFFAF5 /* WordsListViewModel.swift in Sources */,
 				8FB063D91FE6A8B100CFFAF5 /* WordsListTopBarViewModal.swift in Sources */,
 				8FB063DF1FE6AE7300CFFAF5 /* WordsListLayoutController.swift in Sources */,
-				8FB063C01FE6986600CFFAF5 /* WordsListLayoutViewModel.swift in Sources */,
+				8FB063C01FE6986600CFFAF5 /* DoubleHorizontalViewModel.swift in Sources */,
 				8FB063881FE4663200CFFAF5 /* SceneFactory.swift in Sources */,
 				8FB063791FE451E200CFFAF5 /* AppCoordinator.swift in Sources */,
 				8FB063971FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift in Sources */,

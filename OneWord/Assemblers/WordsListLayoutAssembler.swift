@@ -37,7 +37,7 @@ extension WordsListLayoutAssembler: WordsListLayoutAssemblerProtocol {
     }
     
     func assemble() -> DoubleHorizontalViewModelProtocol {
-        return WordsListLayoutViewModel(topBar: self.assemble(), content: self.assemble())
+        return DoubleHorizontalViewModel(topView: self.assemble() as WordsListTopBarCoordinator, bottomView: self.assemble() as WordsListContentCoordinator)
     }
     
     func assemble() -> DoubleHorizontalLayoutProtocol {
