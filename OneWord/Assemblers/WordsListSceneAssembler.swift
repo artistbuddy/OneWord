@@ -14,7 +14,11 @@ protocol WordsListSceneAssemblerProtocol {
 }
 
 class WordsListSceneAssembler {
+    private let viewModelDelegate: WordsListViewModelDelegate?
     
+    init(wordsListViewModelDelegate: WordsListViewModelDelegate? = nil) {
+        self.viewModelDelegate = wordsListViewModelDelegate
+    }
 }
 
 // MARK:- WordsListSceneAssemblerProtocol
@@ -24,6 +28,8 @@ extension WordsListSceneAssembler: WordsListSceneAssemblerProtocol {
     }
     
     func assemble() -> WordsListViewModelProtocol {
-        return WordsListViewModel()
+        let viewModel = WordsListViewModel()
+        viewModel.delegate = self.viewModelDelegate
+        return viewModel
     }
 }
