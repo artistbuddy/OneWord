@@ -8,7 +8,6 @@
 
 import Foundation
 
-// TODO: implement WordsListTopBarViewModel
 class WordsListTopBarViewModel {
     init() {
         
@@ -17,5 +16,15 @@ class WordsListTopBarViewModel {
 
 // MARK:- WordsListViewModelProtocol
 extension WordsListTopBarViewModel: WordsListTopBarViewModelProtocol {
+    var title: String {
+        return "Words List"
+    }
     
+    var addButtonText: String {
+        return "Add"
+    }
+    
+    var notificationsButtonText: String {
+        return "Notifications"
+    }
 }
