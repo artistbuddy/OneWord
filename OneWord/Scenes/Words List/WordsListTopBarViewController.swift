@@ -48,10 +48,18 @@ class WordsListTopBarViewController: UIViewController {
 
     // MARK:- IBActions
     @IBAction private func addAction(_ sender: UIButton) {
+        #if DEBUG
+            print(String(describing: type(of: self)) + "." + #function)
+        #endif
+        
         self.delegate?.didTapAddButton()
     }
     
     @IBAction private func notificationsAction(_ sender: UIButton) {
+        #if DEBUG
+            print(String(describing: type(of: self)) + "." + #function)
+        #endif
+        
         self.delegate?.didTapNotificationButton()
     }
 }

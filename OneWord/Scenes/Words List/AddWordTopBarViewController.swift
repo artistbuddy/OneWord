@@ -48,10 +48,18 @@ class AddWordTopBarViewController: UIViewController {
     
     // MARK:- IBActions
     @IBAction private func actionSave(_ sender: UIButton) {
+        #if DEBUG
+            print(String(describing: type(of: self)) + "." + #function)
+        #endif
+        
         self.delegate?.didTapSaveButton()
     }
     
     @IBAction private func actionCancel(_ sender: UIButton) {
+        #if DEBUG
+            print(String(describing: type(of: self)) + "." + #function)
+        #endif
+        
         self.delegate?.didTapCancelButton()
     }
     

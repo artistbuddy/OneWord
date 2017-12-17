@@ -36,10 +36,18 @@ extension WordsListTopBarViewModel: WordsListTopBarViewModelProtocol {
 // MARK:- WordsListTopBarViewControllerDelegate
 extension WordsListTopBarViewModel: WordsListTopBarViewControllerDelegate {
     func didTapAddButton() {
+        #if DEBUG
+            print(String(describing: type(of: self)) + "." + #function)
+        #endif
+        
         self.delegate?.wordsListTopBarViewModelDidTapAdd(self)
     }
     
     func didTapNotificationButton() {
+        #if DEBUG
+            print(String(describing: type(of: self)) + "." + #function)
+        #endif
+        
         self.delegate?.wordsListTopBarViewModelDidTapNotification(self)
     }
 }

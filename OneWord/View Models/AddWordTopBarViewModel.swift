@@ -36,10 +36,18 @@ extension AddWordTopBarViewModel: AddWordTopBarViewModelProtocol {
 // MARK:- AddWordTopBarViewControllerDelegate
 extension AddWordTopBarViewModel: AddWordTopBarViewControllerDelegate {
     func didTapSaveButton() {
+        #if DEBUG
+            print(String(describing: type(of: self)) + "." + #function)
+        #endif
+        
         self.delegate?.addWordTopBarViewModelDidTapSave(self)
     }
     
     func didTapCancelButton() {
+        #if DEBUG
+            print(String(describing: type(of: self)) + "." + #function)
+        #endif
+        
         self.delegate?.addWordTopBarViewModelDidTapCancel(self)
     }
 }
