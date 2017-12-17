@@ -38,6 +38,8 @@
 		8FB063A61FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063A41FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift */; };
 		8FB063AF1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063AE1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift */; };
 		8FB063B01FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063AE1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift */; };
+		8FB063B21FE5E72B00CFFAF5 /* WordsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063B11FE5E72B00CFFAF5 /* WordsListCoordinator.swift */; };
+		8FB063B31FE5E72B00CFFAF5 /* WordsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB063B11FE5E72B00CFFAF5 /* WordsListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,7 @@
 		8FB063951FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldSceneAssembler.swift; sourceTree = "<group>"; };
 		8FB063A41FE5B68000CFFAF5 /* DoubleHorizontalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleHorizontalLayoutViewController.swift; sourceTree = "<group>"; };
 		8FB063AE1FE5E1D700CFFAF5 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		8FB063B11FE5E72B00CFFAF5 /* WordsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,7 @@
 				8FB063771FE451E200CFFAF5 /* AppCoordinator.swift */,
 				8FB063711FE4515000CFFAF5 /* RootViewControllerProvider.swift */,
 				8FB063741FE4519500CFFAF5 /* RootViewCoordinator.swift */,
+				8FB063B11FE5E72B00CFFAF5 /* WordsListCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -339,6 +343,7 @@
 				8FB063721FE4515000CFFAF5 /* RootViewControllerProvider.swift in Sources */,
 				8FB063751FE4519500CFFAF5 /* RootViewCoordinator.swift in Sources */,
 				8FB0638A1FE4692400CFFAF5 /* HelloWorldFactory.swift in Sources */,
+				8FB063B21FE5E72B00CFFAF5 /* WordsListCoordinator.swift in Sources */,
 				8FB0636F1FE44FF400CFFAF5 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +355,7 @@
 				8FB063731FE4515000CFFAF5 /* RootViewControllerProvider.swift in Sources */,
 				8FB063701FE44FF400CFFAF5 /* Coordinator.swift in Sources */,
 				8FB063831FE460E400CFFAF5 /* HelloWorldViewController.swift in Sources */,
+				8FB063B31FE5E72B00CFFAF5 /* WordsListCoordinator.swift in Sources */,
 				8FB063881FE4663200CFFAF5 /* SceneFactory.swift in Sources */,
 				8FB063791FE451E200CFFAF5 /* AppCoordinator.swift in Sources */,
 				8FB063971FE4778800CFFAF5 /* HelloWorldSceneAssembler.swift in Sources */,

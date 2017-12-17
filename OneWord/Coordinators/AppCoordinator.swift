@@ -37,7 +37,7 @@ class AppCoordinator {
     
     // MARK:- Scenes
     func start() {
-        showHelloWorldScene()
+        showWordsListCoordinator()
     }
     
     func showHelloWorldScene() {
@@ -45,5 +45,13 @@ class AppCoordinator {
         let vc: HelloWorldViewController = assembler.assemble()
         
         self.navigationController.viewControllers = [vc]
+    }
+    
+    func showWordsListCoordinator() {
+        let coordinator = WordsListCoordinator()
+        
+        self.navigationController.viewControllers = [coordinator.rootViewController]
+        
+        coordinator.start()
     }
 }
