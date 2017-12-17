@@ -8,10 +8,14 @@
 
 import Foundation
 
+protocol AddWordTopBarViewModelDelegate: class {
+    func addWordTopBarViewModelDidTapSave(_ viewModel: AddWordTopBarViewModel)
+    func addWordTopBarViewModelDidTapCancel(_ viewModel: AddWordTopBarViewModel)
+}
+
 class AddWordTopBarViewModel {
-    init() {
-        
-    }
+    // MARK:- Properties
+    weak var delegate: AddWordTopBarViewModelDelegate?
 }
 
 // MARK:- AddWordTopBarViewModelProtocol
@@ -27,6 +31,15 @@ extension AddWordTopBarViewModel: AddWordTopBarViewModelProtocol {
     var cancelButtonText: String {
         return "Cancel"
     }
+}
+
+// MARK:- AddWordTopBarViewControllerDelegate
+extension AddWordTopBarViewModel: AddWordTopBarViewControllerDelegate {
+    func didTapSaveButton() {
+        self.delegate?.addWordTopBarViewModelDidTapSave(self)
+    }
     
-    
+    func didTapCancelButton() {
+        self.delegate?.addWordTopBarViewModelDidTapCancel(self)
+    }
 }
