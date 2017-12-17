@@ -22,14 +22,13 @@ class WordsListTopBarCoordinator: RootViewCoordinator {
         return navigationController
     }()
     
-    // MARK:-
+    // MARK:- Scenes
     func start() {
-        showWordsListTopBar()
+        showWordsListTopBarScene()
     }
     
-    func showWordsListTopBar() {
-        let viewModel = WordsListTopBarViewModel()
-        let vc = SceneFactory.wordsListTopBar.createWordsListTopBarViewController(viewModel: viewModel)
+    func showWordsListTopBarScene() {
+        let vc: WordsListTopBarViewController = WordsListTopBarSceneAssembler().assemble()
         
         self.navigationController.viewControllers = [vc]
     }
