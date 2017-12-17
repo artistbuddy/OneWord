@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol WordsListTopBarViewModelDelegate: class {
+protocol WordsListTopBarViewControllerDelegate: class {
     func didTapAddButton()
     func didTapNotificationButton()
 }
@@ -22,7 +22,7 @@ protocol WordsListTopBarViewModelProtocol: class {
 class WordsListTopBarViewController: UIViewController {
     // MARK:- Properties
     var viewModel: WordsListTopBarViewModelProtocol!
-    weak var delegate: WordsListTopBarViewModelDelegate?
+    weak var delegate: WordsListTopBarViewControllerDelegate?
     
     // MARK:- IBOutlets
     @IBOutlet private weak var titleLabel: UILabel!
