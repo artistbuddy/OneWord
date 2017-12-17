@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AddWordTopBarViewModelDelegate: class {
+protocol AddWordTopBarViewControllerDelegate: class {
     func didTapSaveButton()
     func didTapCancelButton()
 }
@@ -22,7 +22,7 @@ protocol AddWordTopBarViewModelProtocol: class {
 class AddWordTopBarViewController: UIViewController {
     // MARK:- Properties
     var viewModel: AddWordTopBarViewModelProtocol!
-    weak var delegate: AddWordTopBarViewModelDelegate?
+    weak var delegate: AddWordTopBarViewControllerDelegate?
     
     // MARK:- IBOutlets
     @IBOutlet private weak var titleLabel: UILabel!
