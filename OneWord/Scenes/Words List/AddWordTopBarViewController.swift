@@ -8,14 +8,21 @@
 
 import UIKit
 
-// TODO: implement AddWordTopBarViewModelProtocol
-protocol AddWordTopBarViewModelProtocol {
-    
+protocol AddWordTopBarViewModelDelegate: class {
+    func didTapSaveButton()
+    func didTapCancelButton()
+}
+
+protocol AddWordTopBarViewModelProtocol: class {
+    var title: String { get }
+    var saveButtonText: String { get }
+    var cancelButtonText: String { get }
 }
 
 class AddWordTopBarViewController: UIViewController {
     // MARK:- Properties
     var viewModel: AddWordTopBarViewModelProtocol!
+    weak var delegate: AddWordTopBarViewModelDelegate?
     
     // MARK:- IBOutlets
     @IBOutlet private weak var titleLabel: UILabel!
@@ -29,17 +36,23 @@ class AddWordTopBarViewController: UIViewController {
         #if DEBUG
             print(String(describing: type(of: self)) + "." + #function)
         #endif
+        
+        setupView()
+    }
+    
+    private func setupView() {
+        self.titleLabel.text = self.viewModel.title
+        self.saveButton.setTitle(self.viewModel.saveButtonText, for: .normal)
+        self.cancelButton.setTitle(self.viewModel.cancelButtonText, for: .normal)
     }
     
     // MARK:- IBActions
-    // TODO: implement actionSave(_:)
     @IBAction private func actionSave(_ sender: UIButton) {
-        
+        self.delegate?.didTapSaveButton()
     }
     
-    // TODO: implement actionCancel(_:)
     @IBAction private func actionCancel(_ sender: UIButton) {
-        
+        self.delegate?.didTapCancelButton()
     }
     
 }
