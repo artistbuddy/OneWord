@@ -22,14 +22,13 @@ class WordsListContentCoordinator: RootViewCoordinator {
         return navigationController
     }()
     
-    // MARK:-
+    // MARK:- Scenes
     func start() {
-        showWordsList()
+        showWordsListScene()
     }
     
-    func showWordsList() {
-        let viewModel = WordsListViewModel()
-        let vc = SceneFactory.wordsList.createWordsListViewController(viewModel: viewModel)
+    func showWordsListScene() {
+        let vc: WordsListViewController = WordsListSceneAssembler().assemble()
         
         self.navigationController.viewControllers = [vc]
     }
