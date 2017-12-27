@@ -24,7 +24,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="actionDidEndEditing:" destination="l7i-4q-Yu9" eventType="editingDidEnd" id="Omj-3g-JDg"/>
                                     <action selector="actionEditingDidEnd:" destination="l7i-4q-Yu9" eventType="editingDidEnd" id="NAV-x0-xZZ"/>
                                     <action selector="actionValueChanged:" destination="l7i-4q-Yu9" eventType="valueChanged" id="qPT-in-ext"/>
                                 </connections>
