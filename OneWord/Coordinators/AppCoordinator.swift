@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppCoordinator {
+class AppCoordinator: RootViewCoordinator {
     // MARK:- RootViewCoordinator
     var childCoordinators: [Coordinator] = []
     var rootViewController: UIViewController {
@@ -48,7 +48,10 @@ class AppCoordinator {
     }
     
     func showWordsListCoordinator() {
-        let vc: DoubleHorizontalLayoutViewController = WordsListLayoutAssembler().assemble()
+        let assembler = WordsListLayoutAssembler()
+        addChildCoordinator(assembler)
+        
+        let vc: DoubleHorizontalLayoutViewController = assembler.assemble()
         
         self.navigationController.viewControllers = [vc]
     }

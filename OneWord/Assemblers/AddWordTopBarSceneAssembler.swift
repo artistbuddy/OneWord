@@ -24,7 +24,12 @@ class AddWordTopBarSceneAssembler {
 // MARK:- AddWordTopBarSceneAssemblerProtocol
 extension AddWordTopBarSceneAssembler: AddWordTopBarSceneAssemblerProtocol {
     func assemble() -> AddWordTopBarViewController {
-        return SceneFactory.addWordTopBar.createAddWordTopBarViewController(viewModel: self.assemble())
+        let viewModel: AddWordTopBarViewModel = self.assemble()
+        
+        let vc = SceneFactory.addWordTopBar.createAddWordTopBarViewController(viewModel: viewModel)
+        vc.delegate = viewModel
+        
+        return vc
     }
     
     func assemble() -> AddWordTopBarViewModel {

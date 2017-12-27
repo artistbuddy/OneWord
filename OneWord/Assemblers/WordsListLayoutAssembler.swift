@@ -16,8 +16,8 @@ protocol WordsListLayoutAssemblerProtocol {
     func assemble() -> WordsListContentCoordinator
 }
 
-class WordsListLayoutAssembler {
-    
+class WordsListLayoutAssembler: Coordinator {
+    var childCoordinators: [Coordinator] = []
 }
 
 // MARK:- WordsListLayoutAssemblerProtocol
@@ -26,12 +26,16 @@ extension WordsListLayoutAssembler: WordsListLayoutAssemblerProtocol {
         let coordiantor = WordsListContentCoordinator()
         coordiantor.start()
         
+        self.childCoordinators.append(coordiantor)
+        
         return coordiantor
     }
     
     func assemble() -> WordsListTopBarCoordinator {
         let coordinator = WordsListTopBarCoordinator()
         coordinator.start()
+        
+        self.childCoordinators.append(coordinator)
         
         return coordinator
     }
