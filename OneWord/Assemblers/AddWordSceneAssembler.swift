@@ -10,7 +10,8 @@ import Foundation
 
 protocol AddWordSceneAssemblerProtocol {
     func assemble() -> AddWordViewController
-    func assemble() -> AddWordViewModelProtocol
+    func assemble() -> AddWordViewModel
+    func assemble() -> WordsListDataSource
 }
 
 class AddWordSceneAssembler {
@@ -19,11 +20,20 @@ class AddWordSceneAssembler {
 
 // MARK:- AddWordSceneAssemblerProtocol
 extension AddWordSceneAssembler: AddWordSceneAssemblerProtocol {
-    func assemble() -> AddWordViewModelProtocol {
-        return AddWordViewModel()
+    func assemble() -> WordsListDataSource {
+        return WordsListController.shared
+    }
+    
+    func assemble() -> AddWordViewModel {
+        return AddWordViewModel(wordsList: self.assemble())
     }
     
     func assemble() -> AddWordViewController {
-        return SceneFactory.addWord.createAddWordViewController(viewModel: self.assemble())
+        let viewModel: AddWordViewModel = self.assemble()
+        
+        let vc = SceneFactory.addWord.createAddWordViewController(viewModel: viewModel)
+        vc.delegate = viewModel
+        
+        return vc
     }
 }

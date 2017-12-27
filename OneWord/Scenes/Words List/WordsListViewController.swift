@@ -38,6 +38,12 @@ class WordsListViewController: UIViewController {
         self.tableView.isHidden = self.viewModel.shouldHideWordsList
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.tableView.reloadData()
+    }
+    
     private func setupView() {
         self.emptyListLabel.text = self.viewModel.emptyListMessage
         self.tableView.delegate = self.viewModel

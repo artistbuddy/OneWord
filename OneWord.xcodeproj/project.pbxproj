@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F8D59E41FF42CA00070807A /* WordsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8D59E31FF42CA00070807A /* WordsListController.swift */; };
+		8F8D59E51FF42CA00070807A /* WordsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8D59E31FF42CA00070807A /* WordsListController.swift */; };
 		8FB0634E1FE4471600CFFAF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB0634D1FE4471600CFFAF5 /* AppDelegate.swift */; };
 		8FB063551FE4471600CFFAF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FB063541FE4471600CFFAF5 /* Assets.xcassets */; };
 		8FB063581FE4471600CFFAF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB063561FE4471600CFFAF5 /* LaunchScreen.storyboard */; };
@@ -101,6 +103,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F8D59E31FF42CA00070807A /* WordsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsListController.swift; sourceTree = "<group>"; };
 		8FB0634A1FE4471600CFFAF5 /* OneWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB0634D1FE4471600CFFAF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FB063541FE4471600CFFAF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -282,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				8FB063911FE4734700CFFAF5 /* GreetingController.swift */,
+				8F8D59E31FF42CA00070807A /* WordsListController.swift */,
 				8FB063DD1FE6AE7300CFFAF5 /* WordsListLayoutController.swift */,
 			);
 			path = Controllers;
@@ -476,6 +480,7 @@
 				8FB063D81FE6A8B100CFFAF5 /* WordsListTopBarViewModal.swift in Sources */,
 				8FB0636F1FE44FF400CFFAF5 /* Coordinator.swift in Sources */,
 				8FB063DE1FE6AE7300CFFAF5 /* WordsListLayoutController.swift in Sources */,
+				8F8D59E41FF42CA00070807A /* WordsListController.swift in Sources */,
 				8FB063F61FE6E2C400CFFAF5 /* AddWordSceneAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +519,7 @@
 				8FB063841FE4624D00CFFAF5 /* AppDelegate.swift in Sources */,
 				8FB063D31FE6A12900CFFAF5 /* WordsListViewController.swift in Sources */,
 				8FB063C31FE6995100CFFAF5 /* WordsListTopBarCoordinator.swift in Sources */,
+				8F8D59E51FF42CA00070807A /* WordsListController.swift in Sources */,
 				8FB063E81FE6BC2E00CFFAF5 /* WordsListFactory.swift in Sources */,
 				8FB063EE1FE6DD0B00CFFAF5 /* AddWordViewController.swift in Sources */,
 				8FB063631FE4471600CFFAF5 /* OneWordTests.swift in Sources */,

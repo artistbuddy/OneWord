@@ -11,6 +11,7 @@ import Foundation
 protocol WordsListSceneAssemblerProtocol {
     func assemble() -> WordsListViewController
     func assemble() -> WordsListViewModelProtocol
+    func assemble() -> WordsListDataSource
 }
 
 class WordsListSceneAssembler {
@@ -23,12 +24,16 @@ class WordsListSceneAssembler {
 
 // MARK:- WordsListSceneAssemblerProtocol
 extension WordsListSceneAssembler: WordsListSceneAssemblerProtocol {
+    func assemble() -> WordsListDataSource {
+        return WordsListController.shared
+    }
+    
     func assemble() -> WordsListViewController {
         return SceneFactory.wordsList.createWordsListViewController(viewModel: self.assemble())
     }
     
     func assemble() -> WordsListViewModelProtocol {
-        let viewModel = WordsListViewModel()
+        let viewModel = WordsListViewModel(wordsList: self.assemble())
         viewModel.delegate = self.viewModelDelegate
         return viewModel
     }

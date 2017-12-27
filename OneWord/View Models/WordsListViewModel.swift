@@ -8,10 +8,6 @@
 
 import UIKit
 
-struct FakeWordsDataSource {
-    var words = ["hello", "bannana", "house", "job"]
-}
-
 protocol WordsListViewModelDelegate: class {
     func wordsListViewModel(_ viewModel: WordsListViewModel, didSelectRowAt: IndexPath)
 }
@@ -20,7 +16,12 @@ class WordsListViewModel: NSObject {
     // MARK:- Properties
     weak var delegate: WordsListViewModelDelegate?
     
-    let list = FakeWordsDataSource()
+    private let wordsList: WordsListDataSource
+    
+    // MARK:- Initialization
+    init(wordsList: WordsListDataSource) {
+        self.wordsList = wordsList
+    }
 }
 
 // MARK:- WordsListViewModelProtocol
@@ -30,20 +31,20 @@ extension WordsListViewModel: WordsListViewModelProtocol {
     }
     
     var shouldHideWordsList: Bool {
-        return self.list.words.count == 0
+        return self.wordsList.getAllWords().count == 0
     }
 }
 
 // MARK:- UITableViewDataSource
 extension WordsListViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.list.words.count
+        return self.wordsList.getAllWords().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "WordListCell")
         
-        cell.textLabel?.text = self.list.words[indexPath.row]
+        cell.textLabel?.text = self.wordsList.getWord(at: indexPath.row)
         
         return cell
     }
