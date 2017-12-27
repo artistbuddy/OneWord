@@ -18,12 +18,21 @@ protocol WordsListLayoutAssemblerProtocol {
 
 class WordsListLayoutAssembler: Coordinator {
     var childCoordinators: [Coordinator] = []
+    
+    private lazy var topBarCoordinator: WordsListTopBarCoordinator = {
+       return WordsListTopBarCoordinator()
+    }()
+    
+    private lazy var contentCoordinator: WordsListContentCoordinator = {
+        return WordsListContentCoordinator()
+    }()
 }
 
 // MARK:- WordsListLayoutAssemblerProtocol
 extension WordsListLayoutAssembler: WordsListLayoutAssemblerProtocol {
     func assemble() -> WordsListContentCoordinator {
-        let coordiantor = WordsListContentCoordinator()
+        let coordiantor = self.contentCoordinator
+        coordiantor.delegate = self.topBarCoordinator
         coordiantor.start()
         
         self.childCoordinators.append(coordiantor)
@@ -32,7 +41,8 @@ extension WordsListLayoutAssembler: WordsListLayoutAssemblerProtocol {
     }
     
     func assemble() -> WordsListTopBarCoordinator {
-        let coordinator = WordsListTopBarCoordinator()
+        let coordinator = self.topBarCoordinator
+        coordinator.delegate = self.contentCoordinator
         coordinator.start()
         
         self.childCoordinators.append(coordinator)

@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol WordsListTopBarCoordinatorDelegate: class {
+    func didShowWordsListTopBarScene()
+    func didShowAddWordTopBarScene()
+}
+
 class WordsListTopBarCoordinator: RootViewCoordinator {
     // MARK:- RootViewCoordinator
     var childCoordinators: [Coordinator] = []
@@ -16,6 +21,8 @@ class WordsListTopBarCoordinator: RootViewCoordinator {
     }
     
     // MARK:- Properties
+    weak var delegate: WordsListTopBarCoordinatorDelegate?
+    
     private lazy var navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
@@ -48,6 +55,7 @@ extension WordsListTopBarCoordinator: AddWordTopBarViewModelDelegate {
         #endif
         
         showWordsListTopBarScene()
+        self.delegate?.didShowWordsListTopBarScene()
     }
     
     func addWordTopBarViewModelDidTapCancel(_ viewModel: AddWordTopBarViewModel) {
@@ -56,6 +64,7 @@ extension WordsListTopBarCoordinator: AddWordTopBarViewModelDelegate {
         #endif
         
         showWordsListTopBarScene()
+        self.delegate?.didShowWordsListTopBarScene()
     }
 }
 
@@ -67,6 +76,7 @@ extension WordsListTopBarCoordinator: WordsListTopBarViewModelDelegate {
         #endif
         
         showAddWordTopBarScene()
+        self.delegate?.didShowAddWordTopBarScene()
     }
     
     // TODO: implement wordsListTopBarViewModelDidTapNotification(_:)
@@ -74,5 +84,16 @@ extension WordsListTopBarCoordinator: WordsListTopBarViewModelDelegate {
         #if DEBUG
             print(String(describing: type(of: self)) + "." + #function)
         #endif
+    }
+}
+
+// MARK:- WordsListContentCoordinatorDelegate
+extension WordsListTopBarCoordinator: WordsListContentCoordinatorDelegate {
+    func didShowWordsListScene() {
+        self.showWordsListTopBarScene()
+    }
+    
+    func didShowAddWordScene() {
+        self.showAddWordTopBarScene()
     }
 }

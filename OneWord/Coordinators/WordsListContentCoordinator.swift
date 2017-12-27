@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol WordsListContentCoordinatorDelegate: class {
+    func didShowWordsListScene()
+    func didShowAddWordScene()
+}
+
 class WordsListContentCoordinator: RootViewCoordinator {
     // MARK:- RootViewCoordinator
     var childCoordinators: [Coordinator] = []
@@ -16,6 +21,8 @@ class WordsListContentCoordinator: RootViewCoordinator {
     }
     
     // MARK:- Properties
+    weak var delegate: WordsListContentCoordinatorDelegate?
+    
     private lazy var navigationController: UINavigationController = {
         let navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
@@ -39,3 +46,13 @@ class WordsListContentCoordinator: RootViewCoordinator {
     }
 }
 
+// MARK:- WordsListTopBarCoordinatorDelegate
+extension WordsListContentCoordinator: WordsListTopBarCoordinatorDelegate {
+    func didShowWordsListTopBarScene() {
+        showWordsListScene()
+    }
+    
+    func didShowAddWordTopBarScene() {
+        showAddWordScene()
+    }
+}
