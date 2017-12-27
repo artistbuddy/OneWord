@@ -10,6 +10,7 @@ import UIKit
 
 protocol DoubleHorizontalLayoutProtocol: class {
     var topViewHeight: CGFloat { get }
+    var backgroundColor: UIColor { get }
 }
 
 protocol DoubleHorizontalViewModelProtocol {
@@ -23,32 +24,29 @@ class DoubleHorizontalLayoutViewController: UIViewController {
     private var layout: DoubleHorizontalLayoutProtocol
     
     private lazy var topView: UIView = {
-        let frame = CGRect(x: self.view.bounds.origin.x,
-                           y: self.view.bounds.origin.y,
-                           width: self.view.bounds.width,
-                           height: self.layout.topViewHeight)
+        let view = UIView()
+        self.view.addSubview(view)
         
-        let view = UIView(frame: frame)
+        view.translatesAutoresizingMaskIntoConstraints = false
         
-        view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
-        view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
-        view.topAnchor.constraint(equalTo: self.view.topAnchor)
+        view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        view.heightAnchor.constraint(equalToConstant: self.layout.topViewHeight).isActive = true
         
         return view
     }()
     
     private lazy var bottomView: UIView = {
-        let frame = CGRect(x: self.view.bounds.origin.x,
-                           y: self.topView.bounds.maxY,
-                           width: self.view.bounds.width,
-                           height: self.view.bounds.height - self.topView.bounds.height)
+        let view = UIView()
+        self.view.addSubview(view)
         
-        let view = UIView(frame: frame)
+        view.translatesAutoresizingMaskIntoConstraints = false
         
-        view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
-        view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
-        view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-        view.topAnchor.constraint(equalTo: self.topView.bottomAnchor)
+        view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        view.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        view.topAnchor.constraint(equalTo: self.topView.bottomAnchor).isActive = true
         
         return view
     }()
@@ -65,14 +63,6 @@ class DoubleHorizontalLayoutViewController: UIViewController {
         self.init(coder: aDecoder)
     }
     
-    private func setupView() {
-        self.view.addSubview(topView)
-        self.view.addSubview(bottomView)
-        
-        addChildViewController(self.viewModel.topViewController, to: self.topView)
-        addChildViewController(self.viewModel.bottomViewController, to: self.bottomView)
-    }
-    
     // MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +72,13 @@ class DoubleHorizontalLayoutViewController: UIViewController {
         #endif
         
         self.setupView()
+    }
+    
+    private func setupView() {
+        self.view.backgroundColor = self.layout.backgroundColor
+        
+        addChildViewController(self.viewModel.topViewController, to: self.topView)
+        addChildViewController(self.viewModel.bottomViewController, to: self.bottomView)
     }
 }
 

@@ -10,10 +10,15 @@ import UIKit
 
 class WordsListLayoutController {
     let topBarHeight: CGFloat = 30
+    let layoutBackgroundColor: UIColor = UIColor.white
 }
 
 // MARK: - DoubleHorizontalLayoutProtocol
 extension WordsListLayoutController: DoubleHorizontalLayoutProtocol {
+    var backgroundColor: UIColor {
+        return self.layoutBackgroundColor
+    }
+    
     var topViewHeight: CGFloat {
         return self.topBarHeight
     }
